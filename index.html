@@ -3,42 +3,110 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <meta name="viewport" content="initial-scale=1.0,user-scalable=no" />	
-<title>前端掏粪工</title>
+<title>Home Page of Xinju</title>
 <style type="text/css">
-p {line-height: 24px;font-size: 16px;}
-a {color:#09f;text-decoration: none;}
-a:hover {text-decoration: underline;}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(http://ww4.sinaimg.cn/large/47683787gw1fafpj6smthj21kw16o7cy.jpg);
+    background-color: #555;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+
+    font-size: 14px;
+    font-family: "droid-sans", "stheiti", 'hei', 'Hiragino Sans GB', "microsoft yahei", sans-serif;
+}
+
+.wrapper {
+    width: 90%;
+    z-index: 1;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    margin-left: -45%;
+    text-align: center;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper h1 {
+    font-size: 42px;
+}
+
+.wrapper .button {
+    display: inline-block;
+    letter-spacing: 1px;
+    font-family: Arial;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    width: 90px;
+    padding: 10px 0;
+    background: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    margin: 0 18px;
+}
+
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mask img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
 </style>
 </head>
 <body>
 
-<p>
-    <strong>
-        前端掏粪工一枚 / <a href="http://www.xiaomeiti.com">看点文章</a>
-    </strong>
-</p>
+<div class="wrapper" id="wrapper">
+    <h1>I am Xinju</h1>
+    <p>FE Engineer in Beijing</p>
+    <p>Web Development &amp; Mobile Development</p>
+    <p>JavaScript／HTML／CSS／Java／Object-C</p>
+    <p>If they throw stones at you, don’t throw back, use them to build your own foundation instead.</p>
+    <div class="buttons">
+        <a href="http://www.xiaomeiti.com" class="button">Blog</a>
+        <a href="javascript:;" class="button" id="wechat-button">Wechat</a>
+    </div>
+</div>
 
-<p>
-    <img src="coder.jpg" width="250" alt="掏粪工" />
-</p>
+<div class="mask" id="mask" style="display:none">
+    <img id="qrcode" src="wechat.png" alt="Wechat" />
+</div>
 
-<p> 
-    这是一个技术屌丝的暗黑世界
-    <br>
-    这里可能什么都有
-    <br>
-    也可能什么都没有
-    <br>
-    一切都是缘分
-    <br>
-    不管怎样你的到来，都会让我闪烁着感动的泪花
-    <br>
-    寂寞...
-    <br>
-    寂寞...
-    <br>
-    哥写的不是代码，是寂寞，无穷无尽的寂寞...
-</p>
+<script type="text/javascript">
+(function() {
+    var button = document.getElementById("wechat-button");
+    var mask = document.getElementById("mask");
+
+    button.onclick = function() {
+        mask.style.display = "";
+    };
+
+    mask.onclick = function() {
+        mask.style.display = "none";
+    };
+})();
+</script>
 
 </body>
 </html>
