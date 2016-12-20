@@ -1,10 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta charset="utf-8" />
 <meta name="viewport" content="initial-scale=1.0,user-scalable=no" />
-<meta name="baidu-site-verification" content="xLyHJjucbm" />
-<title>小厨男</title>
+<meta name="keywords" content="前端开发,JSHacker,HTML5,JS开发,CSS3,Touch开发,微信开发,APP开发,jshacker.com" />
+<meta name="description" content="专注于前端开发领域：这里是一个前端知识的试验田，也许不会开花结果，也许有不完美，但重要的是过程，好好享受前端带给我们的快乐，若干个不完美也许会组成真正的完美。" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />  
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />  
+<title>前端开发 - JSHacker</title>
+
 <style type="text/css">
 html, body {
     width: 100%;
@@ -14,11 +19,12 @@ html, body {
 }
 
 body {
-    background-color: #FFF;
+    background-image: url(http://ww4.sinaimg.cn/large/47683787gw1fafpj6smthj21kw16o7cy.jpg);
+    background-color: #555;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    color: #444;
+    color: #fff;
     -webkit-font-smoothing: antialiased;
 
     font-size: 14px;
@@ -33,10 +39,48 @@ body {
     left: 50%;
     margin-left: -49%;
     text-align: center;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 .wrapper h1 {
     font-size: 18px;
+}
+
+.wrapper .buttons {
+    margin-top: 10%;
+}
+
+.wrapper .button {
+    display: inline-block;
+    letter-spacing: 1px;
+    font-family: Arial;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    width: 90px;
+    padding: 10px 0;
+    background: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    margin: 5px 18px;
+}
+
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mask img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
 }
 
 </style>
@@ -44,9 +88,49 @@ body {
 <body>
 
 <div class="wrapper" id="wrapper">
-    <h1>小厨男</h1>
-    <p>COMING SOON</p>
+    <h1>JS Hacker</h1>
+    <p>Coding since 2007</p>
+    <p>Web Development／Mobile Development</p>
+    <p>JavaScript／HTML／CSS</p>
+	<p>Java／Object-C／HTTP／SQL</p>
+	<p>WE GROW NEITHER BETTER NOR WORSE AS WE GROW OLD BUT MORE AND MORE LIKE OURSELVES.</p>
+    <div class="buttons">
+        <a href="http://blog.jshacker.com" class="button">Blog</a>
+        <a href="javascript:;" class="button" id="wechat-button">Wechat</a>
+		<a href="http://blog.jshacker.com/packer/" class="button">Packer</a>
+        <a href="http://blog.jshacker.com/format/" class="button">Format</a>
+    </div>
 </div>
+
+<div class="mask" id="mask" style="display:none">
+    <img id="qrcode" src="wechat.png" alt="Wechat" />
+</div>
+
+<script type="text/javascript">
+(function() {
+    var button = document.getElementById("wechat-button");
+    var mask = document.getElementById("mask");
+
+    button.onclick = function() {
+        mask.style.display = "";
+    };
+
+    mask.onclick = function() {
+        mask.style.display = "none";
+    };
+})();
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a7fcc9b315b550b56918c3a7e5a8595b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 </body>
 </html>
