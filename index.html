@@ -19,7 +19,7 @@ html, body {
 }
 
 body {
-    background-image: url(http://ww1.sinaimg.cn/large/47683787gw1fb5irnrwtaj20k00ciwhy.jpg);
+    background-image: url(http://ww1.sinaimg.cn/large/47683787gw1fb5ixs8p21j20k00cgn11.jpg);
     background-color: #555;
     background-repeat: no-repeat;
     background-position: center center;
@@ -27,19 +27,21 @@ body {
     color: #fff;
     -webkit-font-smoothing: antialiased;
 
+    overflow: hidden;
     font-size: 14px;
     font-family: "droid-sans", "stheiti", 'hei', 'Hiragino Sans GB', "microsoft yahei", sans-serif;
 }
 
 .wrapper {
+    border-radius: 5px;
     width: 50%;
-    z-index: 1;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    margin-left: -25%;
+    padding: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 20%;
     font-size: 16px;
     line-height: 26px;
+    background: rgba(255,255,255,0.2);
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
@@ -48,16 +50,15 @@ body {
 }
 
 .wrapper h1 {
-    line-height: 28px;
-    font-weight: bold;
-    width: 110px;
-    margin: 0 auto;
+    font-weight: lighter;
+    width: 200px;
     text-align: center;
-    font-size: 18px;
+    margin: 0 auto;
+    font-size: 28px;
 }
 
 .wrapper p {
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: justify;
 }
 
@@ -81,9 +82,12 @@ body {
 
 @media (max-width: 1080px) {
     .wrapper {
-        top: 15%;
         width: 90%;
-        margin-left: -45%;
+    }
+}
+@media (max-width: 320px) {
+    .wrapper {
+        margin-top: 15%;
     }
 }
 </style>
