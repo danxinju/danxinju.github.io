@@ -8,7 +8,7 @@
 <meta name="description" content="专注于前端开发领域：这里是一个前端知识的试验田，也许不会开花结果，也许有不完美，但重要的是过程，好好享受前端带给我们的快乐，若干个不完美也许会组成真正的完美。" />
 <link rel="icon" href="/favicon.ico" type="image/x-icon" />  
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />  
-<title>JSHacker</title>
+<title>JS Hacker</title>
 
 <style type="text/css">
 html, body {
@@ -19,12 +19,11 @@ html, body {
 }
 
 body {
-    background-image: url(http://ww4.sinaimg.cn/large/47683787gw1fafpj6smthj21kw16o7cy.jpg);
-    background-color: #555;
+    background-color: #000;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    color: #fff;
+    color: #ddd;
     -webkit-font-smoothing: antialiased;
 
     font-size: 14px;
@@ -32,37 +31,34 @@ body {
 }
 
 .wrapper {
-    width: 98%;
+    width: 50%;
     z-index: 1;
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 50%;
-    margin-left: -49%;
-    text-align: center;
+    margin-left: -25%;
+    font-size: 16px;
+    line-height: 26px;
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
+.wrapper a {
+    color: #ddd;
+}
+
 .wrapper h1 {
-    font-size: 24px;
-}
-
-.wrapper .buttons {
-    margin-top: 5%;
-}
-
-.wrapper .button {
-    display: inline-block;
-    letter-spacing: 1px;
-    font-family: Arial;
+    color: #eee;
+    line-height: 28px;
+    font-weight: bold;
+    width: 110px;
+    margin: 0 auto;
+    text-align: center;
     font-size: 18px;
-    text-decoration: none;
-    color: #fff;
-    width: 90px;
-    padding: 10px 0;
-    background: #fff;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
-    margin: 5px 18px;
+    background-color: red;
+}
+
+.wrapper p {
+    text-align: justify;
 }
 
 .mask {
@@ -83,21 +79,21 @@ body {
     margin-top: -100px;
 }
 
+@media (max-width: 1080px) {
+    .wrapper {
+        width: 90%;
+        margin-left: -45%;
+    }
+}
 </style>
 </head>
 <body>
 
 <div class="wrapper" id="wrapper">
-    <h1>Welcome to JSHacker</h1>
-    <p>You can call me Xinju.</p>
-    <p>I am a software engineer focusing on web technology, and mobile development.</p>
-    <p>Now I am employed by Qunar.com as a front-end engineer.</p>
-    <p>The content only represent personal view.</p>
-    <p>In spare time, I like coding, surfing internet, watching movie and little travel. Waiting for your voice...</p>
-    <div class="buttons">
-        <a href="http://blog.jshacker.com" class="button">Blog</a>
-        <a href="javascript:;" class="button" id="wechat-button">Wechat</a>
-    </div>
+    <h1>JS HACKER</h1>
+    <p>
+        You can call me Xinju. I am a software engineer focusing on web technology, and mobile development. Now I am employed by Qunar.com as a front-end engineer. The content only represent my personal view. In spare time, I like coding, surfing internet, watching movie and little travel. Welcome to visit <a href="http://blog.jshacker.com" class="button">Blog</a> and contact me with <a href="javascript:;" class="button" id="wechat-button">Wechat</a>, I am waiting for your voice...
+    </p>
 </div>
 
 <div class="mask" id="mask" style="display:none">
