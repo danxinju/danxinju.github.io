@@ -16,7 +16,6 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 body {
@@ -33,15 +32,13 @@ body {
 }
 
 .wrapper {
-    border-radius: 5px;
+    position: absolute;
     width: 50%;
-    padding: 8px;
-    overflow: hidden;
-    margin: 0 auto;
-    margin-top: 20%;
+    left: 50%;
+    margin-left: -25%;
+    top: 35%;
     font-size: 16px;
     line-height: 26px;
-    background: rgba(255,255,255,0.2);
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
@@ -55,6 +52,9 @@ body {
     text-align: center;
     margin: 0 auto;
     font-size: 28px;
+    border-radius: 5px;
+    line-height: 38px;
+    background: rgba(255,255,255,0.2);
 }
 
 .wrapper p {
@@ -63,7 +63,7 @@ body {
 }
 
 .mask {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     z-index: 2;
@@ -82,13 +82,13 @@ body {
 
 @media (max-width: 1080px) {
     .wrapper {
-        margin-top: 35%;
         width: 90%;
+        margin-left: -45%;
     }
 }
 @media (max-width: 320px) {
     .wrapper {
-        margin-top: 15%;
+        top: 15%;
     }
 }
 </style>
@@ -98,7 +98,7 @@ body {
 <div class="wrapper" id="wrapper">
     <h1>JS HACKER</h1>
     <p>
-        I am a software engineer focusing on web and mobile development, now I am employed by Qunar.com as a front-end engineer. The content only represent my personal view, just recording and sharing the technology. In spare time, I like coding, surfing internet, watching movie and little travel. Welcome to visit my <a href="http://blog.jshacker.com" class="button">Blog</a> and contact me with <a href="javascript:;" class="button" id="wechat-button">Wechat</a>, it would be great you can send message to me, anything.
+        I am a software engineer focusing on web and mobile development, now I am employed by Qunar.com as a front-end engineer. The content only represent my personal view, just recording and sharing the technology. In spare time, I like coding, surfing internet, watching movie and little travel. Welcome to visit my <a href="http://blog.jshacker.com" class="button">Blog</a> and contact me with <a href="javascript:;" class="button" id="wechat-button">Wechat</a>, it would be great if you can send message to me, anything.
     </p>
 </div>
 
