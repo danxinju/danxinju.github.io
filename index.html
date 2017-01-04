@@ -28,6 +28,12 @@ body {
     font-family: "Hiragino Sans GB W3","Microsoft YaHei",Tahoma,Arial;
 }
 
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 a {
   color: #16387C;
   text-decoration: none;
@@ -42,22 +48,35 @@ a:visited {
   box-shadow: 0px 2px 3px rgba(0,0,0,0.25);
 }
 
-.header h1 {
-  font-family: "droid-sans", "stheiti", 'hei', 'Hiragino Sans GB', "microsoft yahei", sans-serif;
+.header ul {
   width: 960px;
-  font-weight: lighter;
   margin: 0 auto;
-  overflow:hidden;
-  height: 40px;
-  line-height: 40px;
-  padding: 0;
-  font-size: 18px;
-  color:#fff;
 }
 
-.header h1 a {
+.header ul li {
+	float:left;
+}
+
+.header ul li a {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
 	color: #FFF;
-  margin-left: 7px;
+	font-size:14px;
+	padding: 0 10px;
+}
+
+.header ul li a:hover {
+    text-decoration: none;
+    background: rgb(22, 135, 149);
+}
+
+.header ul li a.home-link {
+  font-size:18px;
+  padding-left: 0;
+  margin-left: 5px;
+  font-weight: lighter;
+  font-family: "droid-sans", "stheiti", 'hei', 'Hiragino Sans GB', "microsoft yahei", sans-serif;
 }
 
 .header h1 a:visited {
@@ -67,7 +86,13 @@ a:visited {
 .content {
   width: 960px;
   margin: 0 auto;
+  padding-left:15px;
+  padding-right:15px;
 }
+
+.left, .right {float:left;}
+.left {width:636px;}
+.right {width:310px;margin-left:10px;}
 
 .content h2 {
   font-size: 14px;
@@ -81,7 +106,7 @@ a:visited {
 .spec-block {
   background: #FFF;
   padding: 5px;
-  margin: 7px;
+  margin-top: 10px;
 }
 
 .nav-items {
@@ -108,7 +133,7 @@ a:visited {
 
 .footer p {
 	padding: 12px;
-  margin: 0;
+	margin: 0;
 	text-align:center;
 }
 
@@ -133,63 +158,87 @@ a:visited {
 }
 
 @media (max-width: 1080px) {
+  html, body {overflow-x:hidden;}
   .header h1, .content {width:100%;}
+  .content {width:100%;padding-left:5px;padding-right:0;}
+  .left {width:97%;}
+  .right {width:97%;margin-left:0;}
 }
 </style>
 </head>
 <body>
 
 <div class="header" id="header">
-  <h1><a href="/">JSHacker</a></h1>
+  <ul>
+	  <li><a href="/" class="home-link">JSHacker</a></li>
+	  <li><a href="http://blog.jshacker.com/note">文章</a></li>
+	  <li><a href="http://blog.jshacker.com/like">喜欢</a></li>
+	  <li><a href="http://blog.jshacker.com/cst/static/1">鸡汤</a></li>
+  </ul>
+  <br style="clear:both;" />
 </div>
 
 <div class="content" id="content">
-   <div class="spec-block">
-      <h2>名称解释</h2>
-      <p>
-        Why is JSHacker？作为一个前端，需要频繁的跟浏览器打交道，从浏览器诞生的那一刻起，我们就在用Hack的方式不断的和浏览器的特性去做博弈，来换取一个兼容的效果。虽然有了jQuery，工程中少了很多Hack，但是在面对移动端的时候，时常还需要写不少Hack。<br />所以比较酷的将自己定义为一个JSHacker好了，那为什么不是CSS Hacker或者HTML Hacker呢？因为相对来讲，更钟爱JS，不忍心占据csshacker.com和htmlhacker.com，希望前端有志之士可以把剩下的两个域名好好用起来。
-      </p>
-    </div>
-    <div class="spec-block">
-  		<h2>个人简介</h2>
-  		<p>
-  			淡新举（网名：Xinju），前端工程师，目前就职于：<a href="https://www.qunar.com" target="_blank">去哪儿网</a>。
-  			<br />
-  			Coding始于2007，崇尚以简单的方案解决问题。
-  		</p>
+   <div class="left">
+	   <div class="spec-block">
+		  <h2>名字解释</h2>
+		  <p>
+			作为一个前端，需要频繁的跟浏览器打交道，从浏览器诞生的那一刻起，我们就在用Hack的方式不断的和浏览器的特性去做博弈，来换取一个兼容的效果。虽然有了jQuery，工程中少了很多Hack，但是在面对移动端或者复杂状况的时候，时常还需要写不少。<br />所以比较酷的将自己定义为一个JSHacker好了，那为什么不是CSS Hacker或者HTML Hacker呢？因为相对来讲，更钟爱JS，不忍心占据csshacker.com和htmlhacker.com，希望前端有志之士可以把剩下的两个域名好好用起来。
+		  </p>
+		  <p style="margin:0">
+			<img src="http://ww2.sinaimg.cn/mw690/47683787gw1fbf0xskqx3j20m80c1gnr.jpg" width="99%" alt="黑客帝国" />
+		  </p>
+		</div>
 
-  		<h2>联系方式</h2>
-  		<p>
-  			博客：<a href="http://blog.jshacker.com">blog.jshacker.com</a><br />
-  			微信：<a href="javascript:;" id="wechat-button">danxinju</a><br />
-  			邮箱：<a href="mailto:xinju@xiaomeiti.com">xinju@xiaomeiti.com</a>
-  		</p>
-    </div>
-
-  	<div class="spec-block">
-  		<h2>推荐文章</h2>
-  		<ul class='nav-items'>
-  			<li><a href="http://blog.jshacker.com/note/3629">谈一谈入门一种或多种开发语言的套路？</a></li>
-  			<li><a href='http://blog.jshacker.com/note/3585'>移动端click事件延迟300ms到底是怎么回事，该如何解决？</a></li>
-  			<li><a href="http://blog.jshacker.com/note/3578">Web端我们有哪些方法可以来实现动画？</a></li>
-  			<li><a href="http://blog.jshacker.com/note/3569">一名优秀卓越的前端开发工程师需要具备什么条件？</a></li>
-  			<li><a href="http://blog.jshacker.com/note/3523">22个你可能不常用的css属性，很强大</a></li>
-  			<li><a href="http://blog.jshacker.com/note/3517">关于Web前端跨域实现的10个方案</a></li>
-  			<li><a href="http://blog.jshacker.com/note/3502">成为一名靠谱Javascript程序员需具备的素质</a></li>
-  			<li><a href="http://blog.jshacker.com/note/3535">HTML5的geolocation获取设备位置原理是什么？</a></li>
-  			<li><a href="http://blog.jshacker.com/note/3594">对程序员来说，互联网公司和传统软件公司有什么区别？</a></li>
-  			<li><a href="http://blog.jshacker.com/note/3542">Web端的绘图需求，选择SVG还是Canvas？</a></li>
-  			<li><a href="http://blog.jshacker.com/note/3528">Javascript到底是如何设计出来的？</a></li>
-  			<li><a href="http://blog.jshacker.com/note/3573">前端开发确保代码清洁的一些建议</a></li>
-  			<li><a href="http://blog.jshacker.com/note/3634">一篇关于程序员职业生涯总结的好文章</a></li>
-  			<li><a href="http://blog.jshacker.com/note/3626">怎么理解480P、720P、1080P，和分辨率有什么关系？</a></li>
-  		</ul>
-    </div>
+		<div class="spec-block">
+			<h2>推荐文章</h2>
+			<ul class='nav-items'>
+				<li><a href="http://blog.jshacker.com/note/3629">谈一谈入门一种或多种开发语言的套路？</a></li>
+				<li><a href='http://blog.jshacker.com/note/3585'>移动端click事件延迟300ms到底是怎么回事，该如何解决？</a></li>
+				<li><a href="http://blog.jshacker.com/note/3578">Web端我们有哪些方法可以来实现动画？</a></li>
+				<li><a href="http://blog.jshacker.com/note/3569">一名优秀卓越的前端开发工程师需要具备什么条件？</a></li>
+				<li><a href="http://blog.jshacker.com/note/3523">22个你可能不常用的css属性，很强大</a></li>
+				<li><a href="http://blog.jshacker.com/note/3517">关于Web前端跨域实现的10个方案</a></li>
+				<li><a href="http://blog.jshacker.com/note/3502">成为一名靠谱Javascript程序员需具备的素质</a></li>
+				<li><a href="http://blog.jshacker.com/note/3535">HTML5的geolocation获取设备位置原理是什么？</a></li>
+				<li><a href="http://blog.jshacker.com/note/3594">对程序员来说，互联网公司和传统软件公司有什么区别？</a></li>
+				<li><a href="http://blog.jshacker.com/note/3542">Web端的绘图需求，选择SVG还是Canvas？</a></li>
+				<li><a href="http://blog.jshacker.com/note/3528">Javascript到底是如何设计出来的？</a></li>
+				<li><a href="http://blog.jshacker.com/note/3573">前端开发确保代码清洁的一些建议</a></li>
+				<li><a href="http://blog.jshacker.com/note/3634">一篇关于程序员职业生涯总结的好文章</a></li>
+				<li><a href="http://blog.jshacker.com/note/3626">怎么理解480P、720P、1080P，和分辨率有什么关系？</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="right">
+		<div class="spec-block">
+			<h2>个人简介</h2>
+			<p>
+				淡新举（网名：Xinju），前端工程师，目前就职于北京一家互联网软件公司。
+				<br />
+				Coding始于2007，崇尚简单的方案解决问题。
+			</p>
+			<p>
+				博客：<a href="http://blog.jshacker.com">blog.jshacker.com</a><br />
+				微信：<a href="javascript:;" id="wechat-button">danxinju</a><br />
+				邮箱：<a href="mailto:xinju@xiaomeiti.com">xinju@xiaomeiti.com</a>
+			</p>
+		</div>
+	</div>
+	<br style="clear:both;" />
 </div>
 
 <div class="footer" id="footer">
 	<p>
 		<span>Copyright ©JSHacker</span>
+		&nbsp;&nbsp;
+		<a href="http://blog.jshacker.com/note">文章</a>
+		&nbsp;-&nbsp;
+		<a href="http://blog.jshacker.com/hot">热门</a>
+		&nbsp;-&nbsp;
+		<a href="http://blog.jshacker.com/cst/static/1">禅师体</a>
+		&nbsp;-&nbsp;
+		<span>禁止非法转载</span>
 	</p>
 </div>
 
